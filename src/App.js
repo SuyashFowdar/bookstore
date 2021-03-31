@@ -1,20 +1,11 @@
+import BooksList from './containers/BooksList';
+import BooksForm from './containers/BooksForm';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
