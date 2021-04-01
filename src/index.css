@@ -25,3 +25,9 @@ code {
     'Courier New',
     monospace;
 }
+
+.category-selector {
+  background-color: transparent;
+  border-width: 0;
+  outline: none;
+}
