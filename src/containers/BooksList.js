@@ -35,12 +35,12 @@ BooksList.propTypes = {
   handleRemoveBook: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   books: state.books,
 });
 
-const mapDispatchToProps = dispatch => ({
-  handleRemoveBook: book => {
+const mapDispatchToProps = (dispatch) => ({
+  handleRemoveBook: (book) => {
     dispatch(removeBook(book));
   },
 });

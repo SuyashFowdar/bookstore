@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
-const BooksForm = props => {
+const BooksForm = (props) => {
   const [title, setTitle] = React.useState(null);
   const [category, setCategory] = React.useState(null);
   const { addBook } = props;
@@ -11,7 +11,7 @@ const BooksForm = props => {
     setTitle(document.querySelector('input').value);
     setCategory(document.querySelector('select').value);
   };
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const params = { title, category, id: Math.random() };
     document.querySelector('input').value = '';
@@ -38,7 +38,7 @@ const BooksForm = props => {
           onChange={handleChange}
         />
         <select name="categories" onChange={handleChange}>
-          {categories.map(category => (
+          {categories.map((category) => (
             <option key={Math.random()} value={category}>{category}</option>
           ))}
         </select>
@@ -52,8 +52,8 @@ BooksForm.propTypes = {
   addBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  addBook: book => {
+const mapDispatchToProps = (dispatch) => ({
+  addBook: (book) => {
     dispatch(createBook(book));
   },
 });
