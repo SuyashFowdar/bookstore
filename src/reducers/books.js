@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/index';
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const defaultState = [
   { title: 'The crow and the fox', category: 'Kids', id: Math.random() },
@@ -8,9 +8,9 @@ const defaultState = [
 
 const booksReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case actionTypes.CREATE_BOOK:
+    case CREATE_BOOK:
       return [...state, action.book];
-    case actionTypes.REMOVE_BOOK:
+    case REMOVE_BOOK:
       return state.filter((el, index) => index !== action.book.id - 1);
     default:
       return state;
