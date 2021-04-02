@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
-const BooksForm = (props) => {
-  const [title, setTitle] = React.useState(null);
-  const [category, setCategory] = React.useState(null);
-  const { addBook } = props;
+const BooksForm = ({ addBook }) => {
+  const [title, setTitle] = useState(null);
+  const [category, setCategory] = useState('Action');
   const handleChange = () => {
-    setTitle(document.querySelector('input').value);
-    setCategory(document.querySelector('select').value);
+    setTitle(document.getElementById('bookTitle').value);
+    setCategory(document.getElementById('bookCategory').value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     const params = { title, category, id: Math.random() };
     document.querySelector('input').value = '';
     setTitle('');
-    if (params.title) addBook(params);
+    if (params.title) {
+      addBook(params);
+    }
   };
   const categories = [
     'Action',
@@ -36,10 +37,11 @@ const BooksForm = (props) => {
           required
           placeholder="Add Your Book"
           onChange={handleChange}
+          id="bookTitle"
         />
-        <select name="categories" onChange={handleChange}>
-          {categories.map((category) => (
-            <option key={Math.random()} value={category}>{category}</option>
+        <select name="categories" onChange={handleChange} id="bookCategory" value={category}>
+          {categories.map((cat) => (
+            <option key={Math.random()} value={cat}>{cat}</option>
           ))}
         </select>
         <input type="submit" value="Add Book" onClick={handleSubmit} />
