@@ -15,6 +15,10 @@ const BooksList = ({
     handleChangeFilter(books, 'All');
   }, []);
 
+  useEffect(() => {
+    handleChangeFilter(books, 'All');
+  }, [books]);
+
   return (
     <div>
       <h1>Book Store</h1>
