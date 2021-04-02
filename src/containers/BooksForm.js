@@ -4,11 +4,13 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions/index';
 
 const BooksForm = ({ addBook }) => {
-  const [title, setTitle] = useState(null);
+  const [title, setTitle] = useState('');
   const [category, setCategory] = useState('Action');
-  const handleChange = () => {
-    setTitle(document.getElementById('bookTitle').value);
-    setCategory(document.getElementById('bookCategory').value);
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
+  };
+  const handleTitleChange = (e) => {
+    setTitle(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,10 +38,10 @@ const BooksForm = ({ addBook }) => {
           type="text"
           required
           placeholder="Add Your Book"
-          onChange={handleChange}
-          id="bookTitle"
+          onChange={handleTitleChange}
+          value={title}
         />
-        <select name="categories" onChange={handleChange} id="bookCategory" value={category}>
+        <select name="categories" onChange={handleCategoryChange} value={category}>
           {categories.map((cat) => (
             <option key={Math.random()} value={cat}>{cat}</option>
           ))}
