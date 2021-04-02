@@ -1,10 +1,7 @@
-const filterReducer = (state = { filter: 'All', filteredBooks: [] }, action) => {
+const filterReducer = (state = 'All', action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
-      return {
-        filter: action.filter,
-        filteredBooks: action.filter === 'All' ? action.books : action.books.filter((el) => el.category === action.filter),
-      };
+      return action.filter;
     default:
       return state;
   }
