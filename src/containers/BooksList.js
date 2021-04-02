@@ -12,18 +12,14 @@ const BooksList = ({
   handleRemoveBook,
 }) => {
   useEffect(() => {
-    handleChangeFilter(books, 'All');
+    handleChangeFilter('All');
   }, []);
-
-  useEffect(() => {
-    handleChangeFilter(books, 'All');
-  }, [books]);
 
   return (
     <div>
       <h1>Book Store</h1>
       <CategoryFilter
-        handleChangeFilter={(filterType) => { handleChangeFilter(books, filterType); }}
+        handleChangeFilter={(filterType) => { handleChangeFilter(filterType); }}
         filter={filter}
       />
       <table className="centered highlight">
@@ -35,7 +31,10 @@ const BooksList = ({
           </tr>
         </thead>
         <tbody>
-          {filter.filteredBooks.map((book, index) => (
+          {books.filter((book) => {
+            if (filter === 'All') return true;
+            return book.category === filter;
+          }).map((book, index) => (
             <Book
               title={book.title}
               category={book.category}
@@ -51,7 +50,7 @@ const BooksList = ({
 };
 
 BooksList.propTypes = {
-  filter: PropTypes.instanceOf(Object).isRequired,
+  filter: PropTypes.string.isRequired,
   books: PropTypes.instanceOf(Array).isRequired,
   handleRemoveBook: PropTypes.func.isRequired,
   handleChangeFilter: PropTypes.func.isRequired,
@@ -66,8 +65,8 @@ const mapDispatchToProps = (dispatch) => ({
   handleRemoveBook: (book) => {
     dispatch(removeBook(book));
   },
-  handleChangeFilter: (books, filter) => {
-    dispatch(changeFilter(books, filter));
+  handleChangeFilter: (filter) => {
+    dispatch(changeFilter(filter));
   },
 });
 
