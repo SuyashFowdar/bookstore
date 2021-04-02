@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ filter, handleChangeFilter }) => {
-  const [selectedFilter, setSelectedFilter] = React.useState(filter.filter);
+  const [selectedFilter, setSelectedFilter] = useState(filter.filter);
   const categories = [
     'All',
     'Action',
@@ -13,6 +13,10 @@ const CategoryFilter = ({ filter, handleChangeFilter }) => {
     'Learning',
     'Sci-Fi',
   ];
+
+  useEffect(() => {
+    setSelectedFilter(filter.filter);
+  }, [filter.filter]);
 
   return (
     <>
