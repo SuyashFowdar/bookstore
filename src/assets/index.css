@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.category-selector {
+  background-color: transparent;
+  border-width: 0;
+  outline: none;
+}
+
+.container-size {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: #fafafa;
+  border-top: solid 1px #e8e8e8;
+  padding: 30px 0;
+}
+
+.form-container {
+  background-color: #fafafa;
+}
+
+form {
+  padding: 10px 0;
+  border-top: solid 1px #e8e8e8;
+}
+
+form input,
+form select {
+  padding: 13px;
+}
+
+form input[type=submit] {
+  width: 184px;
+  background-color: #0290ff;
+  color: white;
+  border-radius: 3px;
+}
+
+form input[type=text] {
+  width: 664px;
+  margin-right: 32px;
+}
+
+form select {
+  width: 285px;
+  margin-right: 32px;
+}
+
+.color-dark-grey {
+  color: #121212;
+}
+
+.link {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav {
+  color: #888;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.actions {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+.actions:not(:last-of-type) {
+  border-right: 1px solid #e8e8e8;
+}
+
+.actions:first-of-type {
+  padding-left: 0;
+}
+
+.nav-container {
+  margin: 0 40px;
+}
+
+.selected-nav,
+.nav:hover {
+  color: #121212;
+}
+
+article {
+  padding: 28px;
+  background-color: white;
+  margin-bottom: 15px;
+  border: solid 1px #e8e8e8;
+}
+
+.progress-button {
+  background-color: #0290ff;
+  color: white !important;
+  padding: 7px 20px;
+  border: 0;
+  border-radius: 3px;
+  width: 180px;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.col,
+.row {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.main-start {
+  justify-content: flex-start;
+}
+
+.main-space-around {
+  justify-content: space-around;
+}
+
+.main-space-between {
+  justify-content: space-between;
+}
+
+.main-center {
+  justify-content: center;
+}
+
+.main-end {
+  justify-content: flex-end;
+}
+
+.cross-center {
+  align-items: center;
+}
+
+.cross-start {
+  align-items: flex-start;
+}
+
+.flex {
+  flex: 1 1;
+}
+
+.h-100 {
+  height: 100%;
+}
