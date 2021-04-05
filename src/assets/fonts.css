@@ -16,9 +16,10 @@
  * limitations under the License.
  */
 
- @font-face {
+@font-face {
   font-family: FuturaPT;
-  src: local(FuturaPT-Book),
+  src:
+    local(futurapt-book),
     url('./Futura PT Book/Futura PT Book.ttf');
   font-weight: normal;
   font-style: normal;
@@ -27,7 +28,8 @@
 
 @font-face {
   font-family: Montserrat;
-  src: local(Montserrat-Regular),
+  src:
+    local(montserrat-regular),
     url('./Montserrat/Montserrat SemiBold/Montserrat SemiBold.ttf');
   font-weight: normal;
   font-style: normal;
@@ -36,8 +38,9 @@
 
 @font-face {
   font-family: Montserrat;
-  src: local(Montserrat-Bold),
-  url('./Montserrat/Montserrat Bold/Montserrat Bold.ttf');
+  src:
+    local(montserrat-bold),
+    url('./Montserrat/Montserrat Bold/Montserrat Bold.ttf');
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -45,7 +48,8 @@
 
 @font-face {
   font-family: PlayfairDisplay;
-  src: local(PlayfairDisplay-Regular),
+  src:
+    local(playfairdisplay-regular),
     url('./Playfair Display/Playfair Display Bold/Playfair Display Bold.ttf');
   font-weight: normal;
   font-style: normal;
@@ -54,7 +58,8 @@
 
 @font-face {
   font-family: ProximaNova;
-  src: local(ProximaNova-Regular),
+  src:
+    local(proximanova-regular),
     url('./Proxima Nova/Proxima Nova Regular/Proxima Nova Regular.ttf');
   font-weight: normal;
   font-style: normal;
@@ -63,13 +68,15 @@
 
 @font-face {
   font-family: RobotoSlab;
-  src: local(RobotoSlab-Bold),
+  src:
+    local(robotoslab-bold),
     url('./Roboto Slab/Roboto Slab Regular/Roboto Slab Regular.ttf');
 }
 
 @font-face {
   font-family: SourceSerifPro;
-  src: local(SourceSerifPro-Bold),
+  src:
+    local(sourceserifpro-bold),
     url('./Source Sans Pro/Source Sans Pro Bold/Source Sans Pro Bold.ttf');
   font-weight: bold;
   font-style: normal;
@@ -77,7 +84,7 @@
 }
 
 .Text-Style-7 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 30px;
   font-weight: bold;
   font-stretch: normal;
@@ -88,7 +95,7 @@
 }
 
 .Text-Style-6 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, Arial, sans-serif;
   font-size: 22px;
   font-weight: bold;
   font-stretch: normal;
@@ -99,7 +106,7 @@
 }
 
 .Text-Style-14 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, Arial, sans-serif;
   font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
@@ -110,7 +117,7 @@
 }
 
 .Text-Style-11 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -121,7 +128,7 @@
 }
 
 .Text-Style-13 {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -132,7 +139,7 @@
 }
 
 .Text-Style-2 {
-  font-family: SourceSerifPro;
+  font-family: SourceSerifPro, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -143,7 +150,7 @@
 }
 
 .Text-Style-4 {
-  font-family: FuturaPT;
+  font-family: FuturaPT, Arial, sans-serif;
   font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
@@ -154,7 +161,7 @@
 }
 
 .Text-Style {
-  font-family: ProximaNova;
+  font-family: ProximaNova, Arial, sans-serif;
   font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
@@ -165,7 +172,7 @@
 }
 
 .Text-Style-8 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -176,7 +183,7 @@
 }
 
 .Text-Style-12 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 32px;
   font-weight: bold;
   font-stretch: normal;
@@ -187,7 +194,7 @@
 }
 
 .Text-Style-9 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
@@ -198,7 +205,7 @@
 }
 
 .Text-Style-10 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -209,7 +216,7 @@
 }
 
 .Text-Style-5 {
-  font-family: Montserrat;
+  font-family: Montserrat, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -219,7 +226,7 @@
 }
 
 .Text-Style-3 {
-  font-family: PlayfairDisplay;
+  font-family: PlayfairDisplay, Arial, sans-serif;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
