@@ -2,6 +2,12 @@
 
 A Bookstore project made with React.
 
+## Cloning
+
+- Open Terminal/CMD and run `git clone https://github.com/krishnzzz/bookstore`
+- Then run `cd bookstore`
+- In this directory, now you can run the required scripts.
+
 ## Available Scripts
 
 In the project directory, you can run:
