@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 const CategoryFilter = ({ handleChangeFilter }) => {
   const [category, setCategory] = useState('All');
-  const handleCategoryChange = (e) => {
-    setCategory(e.target.value);
-    handleChangeFilter(e.target.value);
-  };
   const categories = [
     'All',
     'Action',
@@ -19,14 +15,11 @@ const CategoryFilter = ({ handleChangeFilter }) => {
   ];
 
   return (
-    <>
-      Filter:
-      <select name="categories" onChange={handleCategoryChange} value={category}>
-        {categories.map((cat) => (
-          <option key={Math.random()} value={cat}>{cat}</option>
-        ))}
-      </select>
-    </>
+    <div className="row cross-center nav-container">
+      {categories.map((cat) => (
+        <button type="button" className={`Text-Style-5 link nav ${category === cat ? 'selected-nav' : ''}`} key={Math.random()} onClick={() => { setCategory(cat); handleChangeFilter(cat); }}>{cat}</button>
+      ))}
+    </div>
   );
 };
 
