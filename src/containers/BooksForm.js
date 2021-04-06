@@ -32,23 +32,25 @@ const BooksForm = ({ addBook }) => {
   ];
 
   return (
-    <>
-      <form>
+    <div className="form-container">
+      <form className="container-size">
+        <h2 className="Text-Style-9">ADD NEW BOOK</h2>
         <input
           type="text"
           required
           placeholder="Add Your Book"
           onChange={handleTitleChange}
           value={title}
+          className="Text-Style-10"
         />
-        <select name="categories" onChange={handleCategoryChange} value={category}>
+        <select name="categories" onChange={handleCategoryChange} value={category} className="Text-Style-10">
           {categories.map((cat) => (
-            <option key={Math.random()} value={cat}>{cat}</option>
+            <option key={Math.random()} value={cat} className="color-dark-grey">{cat}</option>
           ))}
         </select>
-        <input type="submit" value="Add Book" onClick={handleSubmit} />
+        <input type="submit" value="Add Book" onClick={handleSubmit} className="link" />
       </form>
-    </>
+    </div>
   );
 };
 

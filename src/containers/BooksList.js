@@ -17,20 +17,15 @@ const BooksList = ({
 
   return (
     <div>
-      <h1>Book Store</h1>
-      <CategoryFilter
-        handleChangeFilter={(filterType) => { handleChangeFilter(filterType); }}
-        filter={filter}
-      />
-      <table className="centered highlight">
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
+      <header className="container-size row">
+        <h1 className="Text-Style-7">Book Store</h1>
+        <CategoryFilter
+          handleChangeFilter={(filterType) => { handleChangeFilter(filterType); }}
+          filter={filter}
+        />
+      </header>
+      <div className="container">
+        <div className="container-size">
           {books.filter((book) => {
             if (filter === 'All') return true;
             return book.category === filter;
@@ -43,8 +38,8 @@ const BooksList = ({
               handleRemoveBook={handleRemoveBook}
             />
           ))}
-        </tbody>
-      </table>
+        </div>
+      </div>
     </div>
   );
 };
